@@ -521,6 +521,7 @@ img {
   margin-left: 55%;
  }
  
+ 
 .cards{
   background-color: white;
   height: 600px;
@@ -696,7 +697,8 @@ img {
    }
    
    /* this booking section */
-  .textcontainerofbook{
+  
+   .textcontainerofbook{
     margin-top: 90px;
     margin-left: 15%;
   }
@@ -1554,7 +1556,7 @@ h2{
   justify-content: center;
   position: absolute;
   margin: auto;
-  top: 120%;
+  top: 125%;
   left: 10%;
 }
 .form1{
@@ -1575,17 +1577,17 @@ h2{
   box-shadow: 10px 10px var(--main-color);
   font-family:sans-serif;
   color: #fff;
-  margin-top: 25%;
+  margin-top: 27%;
 }
 .backgroundofdetails2{
   background-color: #d9d9d9;
   width: 380px;
-  height: 350px;
+  height: 450px;
   display: flex;
   justify-content: center;
   position: absolute;
   margin: auto;
-  top: 110%;
+  top: 107%;
   left: 60%;
 }
 .form2{
@@ -1600,6 +1602,11 @@ h2{
 .mobile-image {
   display: none;
 }
+#fname,#lname,#numberinput,#email{width: 200px; height: 25px; font-size: 15px;}
+.form1,.form2{font-size: 20px;}
+#date,#Services{width: 200px; height: 25px; font-size: 15px;}
+#time{width: 150px; height: 15px; font-size: 15px;}
+#Submit{width: 225px; height: 60px; font-size: 15px;} 
 
 /* this is the adjustement for the mobile version!! */
 @media only screen and (max-width: 480px) {
