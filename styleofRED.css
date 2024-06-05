@@ -1043,8 +1043,8 @@ img {
   display: flex;
   top: 7px;
   right: 55px;
-  height: 32px;
-  width: 35px;
+  height: 34px;
+  width: 81px;
   border: none;
   padding: 10px;
   cursor: pointer;
@@ -1127,6 +1127,7 @@ img {
     width: 100%;
     border: 1px solid var(--main-color);
     border-radius: 50px;
+    margin-bottom:50px ;
   }
   
   .card-footer1 {
@@ -1203,7 +1204,7 @@ img {
   color: #000;
   justify-content: center;
   position: absolute;
-  top:  163.6%;;
+  top:  160.8%;;
   left: 50%;
   transform: translate(-50%, -50%);
 }
@@ -1548,12 +1549,12 @@ h2{
 .backgroundofdetails1{
   background-color: #d9d9d9;
   width: 380px;
-  height: 350px;
+  height: 450px;
   display: flex;
   justify-content: center;
   position: absolute;
   margin: auto;
-  top: 130%;
+  top: 120%;
   left: 10%;
 }
 .form1{
