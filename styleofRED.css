@@ -1,0 +1,1807 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Lato"
+
+  }
+  
+  header {
+    position: relative;
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 100%;
+  }
+  .image{
+    margin-top: 29px;
+   
+  }
+  .container {
+    display: flex;
+    align-items: center;
+    justify-content:space-between;
+    background-image: linear-gradient(to left, #000000, #d2042d);
+
+  }
+  :root {
+    /* --padding: 0.5rem; */
+    --margin-right: 0.5rem;
+    --smoky-black: #000000;
+    --pine-tree: #fff;
+    --blue: #d2042d;
+    --white: #fff;
+    --font-size: 0.8rem;
+  }
+  /* ////////////////////
+  ////////// Sidebar Menu
+  //////////////////// */
+  .sidebar {
+    width: 0;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    right: 0;
+    overflow: hidden;
+    z-index: 1;
+    background-color: #ddd;
+    transition: width 0.3s linear;
+
+   } 
+  
+  .sidebar_header {
+    width: 0;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: var(--white);
+  }
+  
+  .sidebar_menu {
+    width: 100%;
+    height: 100%;
+    align-items: center;
+    margin-left: -120px;
+  }
+  
+  .sidebar_item {
+    padding-top: 15px;
+    width: 100%;
+    height: 100%;
+    font-size: var(--white);
+    color: #000;
+    display: block;
+    position: relative;
+    white-space: nowrap;
+  }
+  
+  .sidebar_item::before {
+    content: "";
+    width: 100%;
+    height: 4px;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    background-color: var(--blue);
+    transform: scale(0);
+    transform-origin: right;
+    transition: all 0.3s linear;
+  }
+  
+  .sidebar_item:hover::before {
+    transform: scale(1);
+  }
+  
+  .sidebar_item:hover {
+    background-color: #fff;
+    color: var(--smoky-black);
+    transition: all 0.3s linear;
+    width: 120px;
+    text-align: center;
+  }
+  
+  .sidebar_item h4 {
+    width: 100%;
+    display: inline-block;
+  }
+  
+  .active {
+    width: 150px;
+    background-color: #dddddd;
+  }
+  .active_margin_right {
+      margin-right: 150px;
+  }
+  h4{
+    margin-right: 35%;
+  }
+  .sidebarfooter{height:50px; width: 300px; background-color: #d2042d; margin-top: 480px;}
+  
+  /* ////////////////////
+  ////////// HEADER
+  //////////////////// */
+  .header {
+    width: 100%;
+    height: 50px;
+    display: flex;
+    justify-content: end;
+    align-items: center;
+  }
+  
+  /* Sidebar Toggle Button */
+  .btn-toggle {
+    width: 50px;
+    height: 25px;
+    border: none;
+    border-radius: 2px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: var(--padding);
+    background-color: transparent;
+    color: #fff;
+    font-size: 30px;
+    margin-right: var(--margin-right);
+    cursor: pointer;
+    transition: all 0.3s linear;
+  }
+  /* ////////////////////
+  ////////// Main content
+  //////////////////// */
+  .contentofsidebar {
+    height: calc(100vh - 50px);
+    background-color: var(--white);
+    padding: var(--padding);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+  }
+  /* start of header page, picture of the front & logo settings */
+  
+
+  .logo{ position:absolute; font-size: 60px; left: -610px; width: 1000px;}
+  .scissor{scale: 150%; color: white; margin-left: 20px;}
+  .logo, .logo2 {
+    font-size: 35px;
+    line-height: 1.5;
+    color: #fff; 
+    font-family: "Bebas Neue";
+  }
+  .logo2{
+    position: absolute;
+    display: flex;
+    text-align:center;
+    padding-top: 320px;
+    left: 33%;
+  }
+  .logo2:hover{
+    color:yellow;
+  }
+  
+  h1 {
+    font-size: 58px;
+    color: #000;
+    text-align: right;
+    font-family:sans-serif ;
+  }
+  .header-container :nth-child(2) {
+    color: #d2042d; 
+  }
+  p {
+    font-size: 25px;
+    line-height: 1.6;
+    text-align: right;
+  }
+  .btn:link,
+  .btn:visited {
+    font-weight: 600;
+    border-radius: 50px;
+    font-size: 25px;
+    background-color: #D2042D;
+    color:white;
+    padding: 10px 30px;
+    text-decoration: none;
+    display: flex;
+    position: absolute;
+  }
+  /* Services space ! */
+  a {
+    left: 82%;
+    top: 50%;
+    transform: translate(74px, 100%);
+  }
+  a.btn{
+    margin-left: -170px;
+    margin-top: 75px;
+  }
+  .header-container {
+    position: absolute;
+    left: 70%;
+    top: 50%;
+    width: 500px;
+    transform: translate(-50%, -50%);
+    text-align: right;
+  }
+  .nav{
+    margin: 0 0;
+    width: 1200px;
+  }  
+
+  .servicepart{
+    background-color: #d2042d;
+    height: 600px;
+    max-width: 100%;
+    border: 5px rgb(253, 253, 253);
+    border-style: dashed;
+  }
+  .text-placeholder{
+    position: absolute;
+    font-size: 17px;
+    color: white;
+    left: 5%;
+    column-count: 2;
+    column-width: 100px;
+    column-gap: 5px;
+    margin-top: 85px;
+  }
+  /* configurations of the button */
+  .buttonofservices{
+    outline: none;
+    cursor: pointer;
+    border: none;
+    padding: 1.5rem 4rem;
+    margin: 0;
+    font-family: inherit;
+    font-size: inherit;
+    position: relative;
+    display: flex;
+    letter-spacing: 0.05rem;
+    font-weight: 700;
+    font-size: 17px;
+    border-radius: 500px;
+    overflow: hidden;
+    background: #d26b6b;
+    color: ghostwhite;
+    left: 90px;
+    margin-top: 440px;
+    margin-left: 15%;
+    font-family: "Lato";
+   }
+   
+   .buttonofservices span {
+    position: relative;
+    z-index: 10;
+    transition: color 0.4s;
+   }
+   
+   .buttonofservices:hover span {
+    color: black;
+   }
+   
+   .buttonofservices::before,
+   .buttonofservices::after {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+   }
+   
+   .buttonofservices::before {
+    content: "";
+    background: #000;
+    width: 120%;
+    left: -10%;
+    transform: skew(30deg);
+    transition: transform 0.4s cubic-bezier(0.3, 1, 0.8, 1);
+   }
+   
+   .buttonofservices:hover::before {
+    transform: translate3d(100%, 0, 0);
+   }
+   
+  .mySlides {display: none}
+  .mySlides2 {display: none;}
+img {
+  vertical-align: middle;
+  height: 650px;
+} 
+
+.img2 {vertical-align: middle;}
+
+.pictureofslide{
+  width:400px; 
+  height:400px;
+}
+.placeholderofshop{
+  height: 150px; 
+  width: 150px;}
+/* Slideshow container of the services */
+.slideshow-container {
+  width: 500px;
+  height: 200px;
+  position: relative;
+  left: 400px;
+  margin: auto;
+  margin-top: -450px ;
+}
+/* Slideshow container of the shop */
+.slideshow-container2 {
+  width: 500px;
+  min-height: 200px;
+  position: absolute;
+  left: 13.5%;
+  margin: auto;
+  margin-top: -20px ;
+}
+.slideshow-container3 {
+  width: 500px;
+  min-height: 200px;
+  position: absolute;
+  left: 13.5%;
+  margin: auto;
+  margin-top: -20px ;
+}
+.imgofshop{height: 100px; width: 100px;}
+
+
+/* Next & previous buttons of the service space */
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  width: auto;
+  height: 400px;
+  padding: 16px;
+  margin-top: -500px;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+  margin-left: 50px;
+}
+/* Next & previous buttons of the shop space */
+.prev2, .next2, .prev3, .next3 {
+  cursor: pointer;
+  position: absolute;
+  top: 40%;
+  width: auto;
+  padding: 16px;
+  margin-top: -22px;
+  color: rgb(184, 49, 49);
+  font-weight: bold;
+  font-size: 25px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+}
+
+/* Position the "next button" to the right for the services */
+.next {
+  margin-left: -117px;
+  border-radius: 50px 0 0 45px;
+}
+/* Position the "next button" to the right for the shop */
+.next2, .next3 {
+  margin-left: -111px;
+  border-radius: 3px 0 0 3px;
+}
+/* Position the "previous button" to the left for the services */
+.prev {
+  margin-left: -484px;
+  border-radius: 0 50px 50px 0;
+}
+/* Position the "previous button" to the left for the shop */
+.prev2,.prev3 {
+  margin-left: -488px;
+  border-radius: 3px 0 0 3px;
+}
+/* On hover, add a black background color with a little bit see-through for the servives*/
+.prev:hover, .next:hover {
+  background-color: rgba(0,0,0,0.8);
+}
+/* On hover, add a black background color with a little bit see-through  for the shop*/
+.prev2:hover, .next2:hover {
+  background-color: rgba(192, 181, 181, 0.8);
+}
+.prev3:hover, .next3:hover {
+  background-color: rgba(192, 181, 181, 0.8);
+}
+
+/* Caption text of services */
+.text {
+  color: black;
+  background-color: #d3c500;
+  font-size: 15px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 350px;
+  left: -40px;
+  width: 50%;
+  margin-left:23%;
+  text-align: center;
+  font-family: "Lato";
+}
+
+/* The dots/bullets/indicators from services */
+.dot {
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #d26b6b;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+/* The dots/bullets/indicators from shop  */
+.dot2 {
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  right: 100px;
+  background-color: #d26b6b;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.dot:hover, .dot2:hover {
+  background-color: #531515;
+}
+/* Fading animation */
+.fade {
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+.fade2 {
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+
+@keyframes fade2 {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+
+/* On smaller screens, decrease text size */
+@media only screen and (max-width: 300px) {
+  .prev, .next,.text {font-size: 11px}
+}
+
+/* shop section start */
+.titleofshop {
+  color: #d2042d;
+  font-size: 60px;
+  font-family: "Brotherton Regular";
+  text-align: center;
+}
+.subtitleofshop{
+  position: absolute;
+  margin-left: 53%;
+  margin-top: 7%;
+  width: 480px;
+  height: 100px;
+  font-size: 25px;
+  text-align: center;
+  font-family: "Lato";
+}
+/* configurations of the button */
+.buttonofshop{
+  outline: none;
+  cursor: pointer;
+  border: none;
+  padding: 1.5rem 4rem;
+  margin: 0;
+  font-family: inherit;
+  font-size: inherit;
+  position: absolute;
+  display: flex;
+  letter-spacing: 0.05rem;
+  font-weight: 700;
+  font-size: 23px;
+  border-radius: 500px;
+  overflow: hidden;
+  background: #D2042D;
+  color: ghostwhite;
+  left: 90px;
+  margin-top: 270px;
+  margin-left: 55%;
+ }
+ 
+.cards{
+  background-color: white;
+  height: 600px;
+}
+  .card,.card2,.card3,.card4,
+  .card5,.card6,.card7,.card8 {
+    --font-color: #323232;
+    --font-color-sub: #666;
+    --bg-color: #d9d9d9;
+    --main-color: #D2042D;
+    --main-focus: #fff;
+    width: 330px;
+    height: 400px;
+    background: var(--bg-color);
+    border: 2px solid var(--main-color);
+    box-shadow: 4px 4px var(--main-color);
+    border-radius: 5px;
+    flex-direction: column;
+    position: relative;
+    justify-content: space-between;
+    margin: 40px;
+    gap: 10px;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  }
+  .card-img {
+      /* clear and add new css */
+    transition: all 0.5s;
+    display: flex;
+    justify-content: center;
+  }
+  .card-title {
+    font-size: 20px;
+    font-weight: 500;
+    text-align: center;
+    color: var(--font-color);
+  }
+  
+  .card-subtitle {
+    font-size: 14px;
+    font-weight: 400;
+    color: var(--font-color-sub);
+    margin-left: 10px;
+  }
+  
+  .card-divider {
+    width: 100%;
+    border: 1px solid var(--main-color);
+    border-radius: 50px;
+  }
+  
+  .card-footer {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 10%
+  }
+  
+  .card-price {
+    font-size: 20px;
+    font-weight: 500;
+    color: var(--font-color);
+  }
+  
+  .card-price span {
+    font-size: 20px;
+    font-weight: 500;
+    color: var(--font-color-sub);
+  }
+  
+  .card-btn {
+    height: 35px;
+    background: var(--bg-color);
+    border: 2px solid var(--main-color);
+    border-radius: 5px;
+    padding: 10px 15px;
+    transition: all 0.3s;
+    background-color: #c0b3b5b0;
+  }
+  
+  .card-btn svg {
+    width: 100%;
+    height: 100%;
+    fill: var(--main-color);
+    transition: all 0.3s;
+  }
+  
+  .card-img:hover {
+    transform: translateY(-3px);
+  }
+  
+  .card-btn:hover {
+    border: 2px solid var(--main-focus);
+  }
+  
+  .card-btn:hover svg {
+    fill: var(--main-focus);
+  }
+  
+  .card-btn:active {
+    transform: translateY(3px);
+  }
+  .bookpart{
+    background-color: #D2042D;
+    height: 600px;
+  }
+  .titleofbook{
+    --main-color: #470210;
+    background-color: #d9d9d9;
+    padding: 20px;
+    width: 700px;
+    border-radius: 500px;
+    display: flex;
+    justify-content: center;
+    margin: auto;
+    font-size: 45px;
+    box-shadow: 6px 6px var(--main-color);
+    font-family:sans-serif;
+  }
+  /* this this the funnction of the button from service */
+  .button2 {
+    outline: none;
+    cursor: pointer;
+    border: none;
+    padding: 1.5rem 4rem;
+    margin: 0;
+    font-family: inherit;
+    font-size: inherit;
+    position: relative;
+    display: inline-block;
+    letter-spacing: 0.05rem;
+    font-weight: 700;
+    font-size: 17px;
+    border-radius: 500px;
+    overflow: hidden;
+    background: #d26b6b;
+    color: ghostwhite;
+    left: 95px;
+    font-family: "Lato";
+   }
+   
+   .button2 span {
+    position: relative;
+    z-index: 10;
+    transition: color 0.4s;
+   }
+   
+   .button2:hover span {
+    color: black;
+   }
+   
+   .button2::before,
+   .button2::after {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+   }
+   
+   .button2::before {
+    content: "";
+    background: #000;
+    width: 120%;
+    left: -10%;
+    transform: skew(30deg);
+    transition: transform 0.4s cubic-bezier(0.3, 1, 0.8, 1);
+   }
+   
+   .button2:hover::before {
+    transform: translate3d(100%, 0, 0);
+   }
+   
+   /* this booking section */
+  .textcontainerofbook{
+    margin-top: 90px;
+    margin-left: 15%;
+  }
+  .contactdetails{
+    width: 400px;
+    font-size: 25px;
+    display: flex;
+    justify-content:center;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    color: #fff;
+   }
+   .text3{
+    text-decoration: none;
+   }
+   .text1{ margin-right: 100px;}
+   .text3{ margin-right: 20px;}
+   
+    #link1{
+      color: white; 
+      position: relative;
+      left: -30%;
+    }
+  .subtextofbook{
+    width:  500px;
+    height: 100px;
+    justify-content: center;
+    font-size: 17px;
+    color: #fff;
+    margin-bottom: 20px;
+    margin-left: -90px;
+  }
+  .mainbuttonofbooking {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5em;
+    margin-top: 7%;
+    margin-left: 68%;
+  }
+    /* positions of button of page form the booking section */
+  .up {
+    display: flex;
+    flex-direction: row;
+    gap: 0.5em;
+  }
+  
+  .down {
+    display: flex;
+    flex-direction: row;
+    gap: 0.5em;
+  }
+  /* card buttons of booking */
+  .cardofbook1 {
+    width: 100px;
+    height: 100px;
+    outline: none;
+    border: none;
+    background: white;
+    border-radius: 100px 5px 5px 5px;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+    transition: .2s ease-in-out;
+
+  }
+  .instagram {
+    margin-top: 1.5em;
+    margin-left: 1.2em;
+    fill: #cc39a4;
+  }
+  
+  .cardofbook2 {
+    width: 100px;
+    height: 100px;
+    outline: none;
+    border: none;
+    background: white;
+    border-radius: 5px 100px 5px 5px;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+    transition: .2s ease-in-out;
+  }
+  
+  .twitter {
+    margin-top: 1.5em;
+    margin-left: -.9em;
+    fill: #03A9F4;
+  }
+  
+  .cardofbook3 {
+    width: 100px;
+    height: 100px;
+    outline: none;
+    border: none;
+    background: white;
+    border-radius: 5px 5px 5px 100px;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(229, 215, 215, 0.3) 0px 1px 3px -1px;
+    transition: .2s ease-in-out;
+  }
+  
+  .facebook {
+    margin-top: -.6em;
+    margin-left: 1.2em;
+    fill: #001cbe;
+  }
+  
+  .cardofbook4 {
+    width: 100px;
+    height: 100px;
+    outline: none;
+    border: none;
+    background: white;
+    border-radius: 5px 5px 100px 5px;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+    transition: .2s ease-in-out;
+  }
+  
+  .tiktok {
+    margin-top: -.9em;
+    margin-left: -1.2em;
+    fill: black;
+  }
+  
+  .cardofbook1:hover {
+    cursor: pointer;
+    scale: 1.1;
+    background-color: #cc39a4;
+  }
+  
+  .cardofbook1:hover .instagram {
+    fill: white;
+  }
+  
+  .cardofbook2:hover {
+    cursor: pointer;
+    scale: 1.1;
+    background-color: #03A9F4;
+  }
+  
+  .cardofbook2:hover .twitter {
+    fill: white;
+  }
+  
+  .cardofbook3:hover {
+    cursor: pointer;
+    scale: 1.1;
+    background-color: rgb(4, 4, 167);
+  }
+  
+  .cardofbook3:hover .facebook {
+    fill: white;
+  }
+  
+  .cardofbook4:hover {
+    cursor: pointer;
+    scale: 1.1;
+    background-color: black;
+  }
+  
+  .cardofbook4:hover .tiktok {
+    fill: white;
+  }
+  .titleoffollow{
+    font-size: 30px;
+    color: whitesmoke;
+    display: flex;
+    margin-left: -50px;
+    margin-bottom: 10px;
+  }
+  /* location section */
+
+  .locationpart{
+    background-color: #d9d9d9;
+    height: 700px;
+    width: 100%;
+  }
+  .titleoflocation{
+    font-size: 45px;
+    font-weight: 100;
+    margin: auto;
+    background-color: #FFFBE4;
+    width: 505px;
+    height: 90px;
+    margin-top: 452px;
+    text-align: center;
+    border-style: solid;
+    border-color: #000;
+    font-family:sans-serif;
+    position: absolute;
+    margin-left: 100px;
+    padding-top: 15px;
+  }
+ 
+  .map{
+    border-style: solid;
+    border-color: #000;
+    margin-right: 120px;
+    margin-left: 100px;
+    position: relative;
+  }
+  .borderofmap{
+  display: flex;
+  }
+  #verticle-line {
+    border-radius: 25%;
+    display: flex;
+    min-height: 100px;
+    margin-left: -500px;
+  }
+  .openingtimes{
+    background-color: #FFFBE4;
+    display: flex;
+    width: 420px;
+    height:540px;
+    justify-content: center;
+    border-color: #000 1px;
+    border-style:solid ;
+    border-radius: 10%;
+    box-shadow: 6px 6px var(--main-color);
+    --main-color: #D2042D;
+    position: relative;
+
+  }
+  .titleofopeningtime{
+    font-size: 50px;
+    margin-bottom: 10px;
+    margin-top: 50px;
+    margin-left: -60px;
+    font-family:sans-serif;
+  }
+  .titleofdays{
+    font-size: 23px;
+    margin-top: 150px;
+    margin-left: -270px;
+    line-height: 2;
+  }
+  /* bottom of everything */
+  footer{
+    height: 150px;
+    background-color: #4a4a4a;
+  }
+  /* this is the ajustement for the mobile version!! */
+  @media only screen and (max-width: 480px) {
+    .body{width: 100%;}
+
+    /* this is navigation section */
+    .container{height: 60px;} 
+    .logo{font-size: 18px;}
+    svg.bi.bi-scissors{height: 20px;width: 20px;}
+    .sidebar{right: 164px;}
+    .active{width: 160px;}
+    .sidebarfooter{display: none;}
+
+    /* this for header section */
+
+    header{width: 100%;}
+    h1{font-size: 25px;}
+    p {font-size: 15px;}
+    .header-container{margin-top: 30px;margin-left: -150px; }
+    .btn:link, .btn:visited {font-size: 13px; padding: 10px 15px;}
+    a.btn{margin-top: 55px; margin-left: -120px;}
+    img{height: 200px;}
+
+    /* services section */
+
+    .servicepart{max-height: 80%; width: 100%;}
+    .text-placeholder{font-size: 13px; margin-top: 40px;}
+    .buttonofservices{font-size: 15px; padding: 1.0rem 1.7rem; top: -25%;left: 37%;transform: translate(-50%, -50%); }
+    .slideshow-container{left: 20%; top: 55%;}
+    .pictureofslide{height: 200px; width: 250px;margin-top: -40px;}
+    .text{color:rgb(128, 0, 0); font-size: 10px; top: 135px; left: -120px;}
+    .next{margin-left: -265px;}
+    .next,.prev {height: 200px; margin-top: -68%;}
+    .dot{display: none;}
+
+    /* this is shop part */
+
+    .titleofshop{font-size: 45px; margin-top: 10px;}
+    .subtitleofshop{font-size: 13.5px; font-weight: 800; margin-left: -7%; margin-top: 20px;}
+    .slideshow-container2{width: 250px; min-height: 100px; margin-top: 70px;}
+    .card,.card2,.card3,.card4{width: 300px;; height:350px; margin-left: 0px; margin-top: 10px;}
+    .cards{height: 550px; width: 100%;}
+    .buttonofshop{display: none;}
+    .prev2 {margin-left: -325px}
+    .next2 {margin-left: 30px;}
+
+    /* this is booking space */
+
+    .bookpart{height: 700px; width: 100%;}
+    .titleofbook{width: 90%;font-size: 35px;}
+    .textcontainerofbook {margin-top: 30px; margin-left: 0px;} /* button + or |(text)  */
+    .titleoffollow{margin-top: 290px; font-size: 35px;margin-left: -70px;}
+    .mainbuttonofbooking{margin-left: 25%;}
+    .subtextofbook{position: absolute; color: #fff; margin-left: -120px;}
+    .text1,.text2,.text3{font-size: 23px;}
+    .text1{margin-right: 50px;}
+    .text3{margin-right: 20px;}
+    .contactdetails {margin-left: 0px;}
+
+    /* location section */
+
+    .locationpart{height: 700px; width: 100%;}
+    .map{width: 100%; height:255px;margin-left: 0%;margin-top: -100px;}
+    .redmap{width: 407px; height: 250px;margin-right: 0px;}
+    .titleoflocation{font-size: 30px; width: 100%; height:60px; margin-left:0px; margin-top: 153px;}
+    .openingtimes{width: 260px; height: 335px;margin-left: -460px; margin-top: 235px;}
+    .titleofopeningtime{font-size: 35px; margin-left: -50px; margin-top: 30px;}
+    .titleofdays{font-size: 15px; margin-left: -160px; margin-top: 100px;}
+  }
+ /* //////////////Shop page style//////////////   */
+ .topofshop {
+  background-color: #fff;
+  height: 1050px;
+  margin-bottom: 90px;
+ }
+ .product-list {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  padding: 20px;
+  box-sizing: border-box;
+}
+ .cart {
+  position: fixed;
+  right: 0;
+  top: 0;
+  width: 200px;
+  background-color: #f4f4f4;
+  border-left: 1px solid #ccc;
+  padding: 20px;
+  box-sizing: border-box;
+  display: none;
+  flex-direction: column;
+  overflow-y: auto;
+  z-index: 1000;
+}
+.cart h2 {
+  margin-top: 0;
+  font-size: 20px;
+}
+.fa-solid .fa-cart-shopping {
+  color: white;
+}
+.cart-toggle-btn {
+  position: fixed;
+  top: 7px;
+  right: 55px;
+  border: none;
+  padding: 10px;
+  cursor: pointer;
+  z-index: 1001;
+}
+
+.cart ul {
+  list-style-type: none;
+  padding: 0;
+}
+.cart li {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 10px;
+  margin-top: -540px;
+}
+.cart li button {
+  background-color: rgb(194, 15, 15);
+  color: white;
+  border: none;
+  padding: 2px 5px;
+  cursor: pointer;
+}
+#cart-items {
+  margin-top: 10px;
+}
+.total-container {
+  position: absolute;
+  bottom: 20px;
+  left: 20px;
+  right: 20px;
+  background-color: #fff;
+  padding: 10px;
+  box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.1);
+}
+.cardsofpageofshop{
+  display: flex;
+}
+  .cardofshop1,.cardofshop2,.cardofshop3,.cardofshop4 {
+    --font-color: #323232;
+    --font-color-sub: #666;
+    --bg-color: #d9d9d9;
+    --main-color: #D2042D;
+    --main-focus: #fff;
+    width: 330px;
+    height: 400px;
+    background: var(--bg-color);
+    border: 2px solid var(--main-color);
+    box-shadow: 4px 4px var(--main-color);
+    border-radius: 5px;
+    flex-direction: column;
+    position: relative;
+    justify-content: space-between;
+    margin: 30px;
+    gap: 5px;
+    margin-top: 50px;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  }
+  .card-img {
+      /* clear and add new css */
+    transition: all 0.5s;
+    display: flex;
+    justify-content: center;
+  }
+  .card-title {
+    font-size: 20px;
+    font-weight: 500;
+    text-align: center;
+    color: var(--font-color);
+  }
+  
+  .card-subtitle {
+    font-size: 14px;
+    font-weight: 400;
+    color: var(--font-color-sub);
+    margin-left: 10px;
+  }
+  
+  .card-divider {
+    width: 100%;
+    border: 1px solid var(--main-color);
+    border-radius: 50px;
+  }
+  
+  .card-footer1 {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .card-price {
+    font-size: 20px;
+    font-weight: 500;
+    color: var(--font-color);
+  }
+  
+  .card-price span {
+    font-size: 20px;
+    font-weight: 500;
+    color: var(--font-color-sub);
+  }
+  
+  .card-btn {
+    height: 35px;
+    background: var(--bg-color);
+    border: 2px solid var(--main-color);
+    border-radius: 5px;
+    padding: 0 15px;
+    transition: all 0.3s;
+    background-color: #c0b3b5b0;
+  }
+  
+  .card-btn svg {
+    width: 100%;
+    height: 100%;
+    fill: var(--main-color);
+    transition: all 0.3s;
+  }
+  
+  .card-img:hover {
+    transform: translateY(-3px);
+  }
+  
+  .card-btn:hover {
+    border: 2px solid var(--main-focus);
+  }
+  
+  .card-btn:hover svg {
+    fill: var(--main-focus);
+  }
+  
+  .card-btn:active {
+    transform: translateY(3px);
+  }
+.titleofshoppage{
+  display: flex;
+  font-size: 50px;
+  font-weight: 10;
+  justify-content: center;
+  margin-top: 40px;
+  color: #D2042D;
+}
+.reviewsection{
+  background-color: #D2042D;
+  height: 500px;
+  width: auto;
+}
+.titleofreview{
+  font-size: 44px;
+  font-weight: 600;
+  width: 770px;
+  padding: 10px;
+  text-align: center;
+  background-color: #DCD99F;
+  color: #000;
+  justify-content: center;
+  position: absolute;
+  top:  204.5%;;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.reviews{
+  position: absolute;
+  color: #fff;
+  margin-left: -100px;
+}
+.textfromreviews1, .textfromreviews2, .textfromreviews3, .textfromreviews4{
+  position: absolute;
+  color: #fff;
+  padding-left: 6px;
+  font-size: 17px;
+  text-align: left;
+}
+.textfromreviews1{
+  margin-top: 100px; 
+  margin-left: 20px;
+}
+.textfromreviews2{ 
+  margin-top: 300px;
+  margin-left: 280px;
+}
+.textfromreviews3{
+  margin-top: 100px;
+  margin-left: 590px;
+}
+.textfromreviews4{
+  margin-top: 260px;
+  margin-left: 720px;
+}
+@media only screen and (max-width: 1990px){
+  .slideshow-container3{display: none;}
+  .prev3,.next3{display: none;}
+}
+/* this is the ajustement for the mobile version!! */
+@media only screen and (max-width: 480px) {
+  .topofshop{height: 400px;  width: 100%;}
+  .sidebarfooter{display: none;}
+
+  /* this is ajustments of shop page */
+
+  .titleofshoppage{font-size: 34px;}
+  .cardsofpageofshop{display: none;}
+  .slideshow-container3{ position: absolute; display: block; margin-top: 20px;}
+  .prev3{margin-left: -528px;}
+  .next3{margin-left: -179px;}
+  #locationofside{right:144px;}
+  .sidebarfooter{display: none;}
+  
+
+  /*this review section ajustments  */
+
+  .titleofreview{margin-top: -1200px; margin-left: 0%; font-size: 30px; width: 412px; color: white; background:none}
+  .reviewsection{margin-right: -10px; height: 765px;}
+  .textfromreviews1,.textfromreviews2, .textfromreviews3, .textfromreviews4{font-size: 12px; width: 400px; }
+  .textfromreviews1 {margin-top: 175px; margin-left: 10px;}
+  .textfromreviews2 {margin-top: 330px; margin-left: -10px;; text-align: right;}
+  .textfromreviews3 {margin-top: 455px; margin-left: 10px;}
+  .textfromreviews4 {margin-top: 570px;margin-left: -10px; text-align: right;}
+
+  /* this is footer ajustments */
+
+  .footertitle{font-size: 15px;}
+}
+
+/* ////////////// Services page css/////////////// */
+.Servicestext{
+  font-size: 40px;
+  font-weight: 600;
+  text-align: center;
+  margin-top: 80px;
+  padding-bottom: 60px;
+}
+
+.ladiestext{
+  top: 250px;
+  left: 800px;
+  position: relative;
+  text-align: right;
+  color: #fff;
+  font-size: 60px;
+}
+.gentlemantext{
+  top: 270px;
+  left: 90px;
+  position: relative;
+  text-align: left;
+  color: #fff;
+  font-size: 60px;
+}
+.textposition1{
+    position: absolute;
+    font-size: 17px;
+    color: white;
+    left: 7%;
+    column-count: 2;
+    column-width: 100px;
+    column-gap: 5px;
+    margin-top: 85px;
+}
+.textposition2{
+  position: absolute;
+  font-size: 17px;
+  color: white;
+  left: 41%;
+  column-count: 2;
+  column-width: 100px;
+  column-gap: 5px;
+  margin-top: 85px;
+}
+.flashofcontainer1{
+  width: auto;
+  height: 400px;
+  background: #D2042D;
+  position: relative;
+  display: flex;
+  place-items: center;
+  overflow: hidden;
+  border-radius: 0px 50px 50px 0px;
+  margin-right: 150px;
+  margin-bottom: 100px;
+}
+.flashofcontainer2{
+  width: auto;
+  height: 400px;
+  background: #D2042D;
+  position: relative;
+  display: flex;
+  place-items: center;
+  overflow: hidden;
+  border-radius: 50px 0px 0px 50px;
+  margin-left: 119.5px;
+  margin-bottom: 100px;
+}
+
+.flashofcontainer1 h2 {
+  z-index: 1;
+  color: white;
+  font-size: 2em;
+}
+.flashofcontainer2 h2 {
+  z-index: 1;
+  color: white;
+  font-size: 2em;
+}
+
+h2{
+  margin-bottom: 550px;
+  font-weight: 50;
+}
+
+.flashofcontainer1::before {
+  content: '';
+  position: absolute;
+  width: 100px;
+  background-image: linear-gradient(180deg, #fff, #ffffff);
+  height: 650%;
+  left: 100%;
+  animation: rotBGimg 3s linear infinite;
+  transition: all 0.2s linear;
+}
+.flashofcontainer2::before {
+  content: '';
+  position: absolute;
+  width: 100px;
+  background-image: linear-gradient(180deg, #ffffff, #ffffff);
+  height: 650%;
+  animation: rotBGimg 3s linear infinite;
+  transition: all 0.2s linear;
+}
+
+@keyframes rotBGimg {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.flashofcontainer1::after {
+  content: '';
+  position: absolute;
+  background: #D2042D;
+  inset: 5px;
+  border-radius: 45px;
+}
+.flashofcontainer2::after {
+  content: '';
+  position: absolute;
+  background: #D2042D;
+  inset: 5px;
+  border-radius: 45px;
+}   
+.btnofservicepage{
+  outline: none;
+  cursor: pointer;
+  border: none;
+  padding: 2rem 15rem;
+  margin: 0;
+  font-family: inherit;
+  font-size: inherit;
+  position: relative;
+  display: flex;
+  letter-spacing: 0.05rem;
+  font-weight: 700;
+  font-size: 40px;
+  border-radius: 500px;
+  overflow: hidden;
+  background: #D2042D;
+  color: ghostwhite;
+  left: 57px;
+  margin-top: 140px;
+  margin-left: 8%;
+  font-family: "Lato";
+  margin-bottom: 100px;
+ }
+ 
+ .btnofservicepage span {
+  position: relative;
+  z-index: 10;
+  transition: color 0.4s;
+ }
+ 
+ .btnofservicepage:hover span {
+  color: whitesmoke;
+ }
+ 
+ .btnofservicepage::before,
+ .btnofservicepage::after {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+ }
+ 
+ .btnofservicepage::before {
+  content: "";
+  background: #000;
+  width: 120%;
+  left: -10%;
+  transform: skew(30deg);
+  transition: transform 0.4s cubic-bezier(0.3, 1, 0.8, 1);
+ }
+ 
+ .btnofservicepage:hover::before {
+  transform: translate3d(100%, 0, 0);
+ } 
+ /* this is the ajustement for the mobile version!! */
+ @media only screen and (max-width: 480px) {
+  
+  /* ajustment of top title of services page */
+
+  .Servicestext{font-size: 20px;}
+
+/* this is ajustments of navigation */
+
+  .sidebarfooter{display: none;}
+  #sidebarposition{right:-30px;}
+
+  /* this containers attributies */
+
+  .flashofcontainer1{height: 700px; width: 411px; border-radius: 0px; text-align: center;}
+  .textposition1{font-size: 16px; margin-top: 60px; left: 15%; column-count: 1;}  
+  .ladiestext{left: 115px; top: 20px;}
+  .flashofcontainer2{height: 700px; width: auto; border-radius: 0px; text-align: center; margin-left: 0%; }
+  .textposition2{font-size: 16px; margin-top: 60px; left: 15%; column-count: 1;}  
+  .gentlemantext{left: 60px; top: 20px;}
+  .btnofservicepage{padding: 1.5rem 1.8rem; font-size: 30px; margin-left:-10%; margin-top: -10px;}
+  .btnofservicepage::before {content: "";transform: none;transition: none;}
+
+ }
+ /* this is this the booking page attributes */
+ .image-container {
+  position: relative;
+
+  background-repeat: no-repeat;
+}
+
+.image-container img {
+  width: 98.9vw;
+  height: 92vh;
+  background-size: cover;
+  filter: brightness(170%);
+}
+
+.overlay-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: #fff;
+  text-shadow: 2px 0 #000000, -2px 0 #000, 0 2px #000, 0 -2px #000,
+               1px 1px #000, -1px -1px #000, 1px -1px #000, -1px 1px #000;
+               /* this changes the border of title */ 
+  font-weight:600;
+  padding: 10px 20px; 
+  font-size: 60px; 
+  text-align: center; 
+}
+.booktitle{
+  color: #fff; 
+  font-weight:400;
+  padding: 10px 20px; 
+  font-size: 70px; 
+  text-align: center; 
+  width: 400px;
+}
+.booktitle2{
+  color: #fff; 
+  width: 700px;
+  font-weight:600;
+  padding: 10px 20px; 
+  font-size: 40px; 
+  text-align: center; 
+}
+.titleofbookpage1{
+  --main-color: #8f0621;
+  background-color: #D2042D;
+  padding: 20px;
+  width: 380px;
+  border-radius: 0px 500px 0px 500px;
+  display: flex;
+  justify-content: center;
+  margin-left: 10%;
+  font-size: 30px;
+  box-shadow: 10px 10px var(--main-color);
+  font-family:sans-serif;
+  color: #fff;
+  margin-top: 2%;
+  
+}
+.bookingpagebody{
+  width: auto;
+  height: 100vh;
+}
+.backgroundofdetails1{
+  background-color: #d9d9d9;
+  width: 380px;
+  height: 350px;
+  display: flex;
+  justify-content: center;
+  position: absolute;
+  margin: auto;
+  top: 130%;
+  left: 10%;
+}
+.form1{
+  margin: auto;
+  text-align: center;
+  color: #000;
+}
+.titleofbookpage2{
+  --main-color: #8f0621;
+  background-color: #D2042D;
+  padding: 20px;
+  width: 380px;
+  border-radius: 0px 500px 0px 500px;
+  display: flex;
+  justify-content: center;
+  margin-left: 60%;
+  font-size: 30px;
+  box-shadow: 10px 10px var(--main-color);
+  font-family:sans-serif;
+  color: #fff;
+  margin-top: 25%;
+}
+.backgroundofdetails2{
+  background-color: #d9d9d9;
+  width: 380px;
+  height: 350px;
+  display: flex;
+  justify-content: center;
+  position: absolute;
+  margin: auto;
+  top: 110%;
+  left: 60%;
+}
+.form2{
+  margin: auto;
+  text-align: center;
+  color: #000;
+}
+.desktop-image {
+  display: block;
+}
+
+.mobile-image {
+  display: none;
+}
+
+/* this is the adjustement for the mobile version!! */
+@media only screen and (max-width: 480px) {
+
+  /* this is the setting of top of booking page! */
+  
+  .image-container img {width: 100%;background-image: none;height: 94vh;}
+  .desktop-image {display: none;}
+
+    /* this is allow the other picture to show up on screen */
+
+  .mobile-image { display: block;}
+  .booktitle{font-size: 60px;} 
+  .booktitle2{font-size: 25px;} 
+  
+  /* this is the bottom part of booking page*/
+
+  .main-section-of-Booking{ height: 1000px;}
+  .titleofbookpage1{margin: auto; margin-top: -143px; width: 340px; font-size: 28px;}
+  .titleofbookpage2{margin: auto; margin-top: 103%; width: 340px; font-size: 28px;} 
+  .backgroundofdetails1 {width: 340px; top: 115%; left: 10%;}
+  .backgroundofdetails2 {width: 340px; top: 173%; left: 10%;}
+}
+/* last page (Thank you page for the client that made appointment) */
+
+.imageofthank {
+  background-image: url('redbubble.jpg');
+  background-size: cover;
+  background-position: center;
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  filter: brightness(60%);
+}
+.thanksmessage{
+  position: absolute;
+  top: 30%;
+  left: 50%;
+  width: 1050px;
+  transform: translate(-50%, -50%);
+  color: #fff;
+  font-weight:600;
+  padding: 10px 20px; 
+  font-size: 30px; 
+  text-align: center;
+ }
+ /* this is the asjustment for the mobile version!! */
+@media only screen and (max-width: 480px) {
+  .bodyofthankspage{ height: 900px;}
+  .footerofthanks{margin-top: 764px;}
+  .thanksmessage{width: 385px; font-size: 25px; top: 40%;}
+  .logo2{padding-top: 570px; left: 10%;font-size: 27px;}
+}
+
+/* this is settings for the Egde platform! */
+@media only screen and (min-width: 1480px){  
+  /* location part in page 1 */
+  .borderofmap{ margin-left: 80px; gap: 100px} 
+  /* review part in shop page */
+  .titleofreview{ margin-top: -325px;}
+  .textfromreviews4 {margin-left: 820px;}
+  .textfromreviews1, .textfromreviews2, .textfromreviews3, .textfromreviews4{font-size: 40px;}
+  /* services page  */
+  .flashofcontainer1{margin-right: 146px;}
+  .flashofcontainer2{margin-left: 364px;}
+  .ladiestext{margin-left: 130px;}
+  /* thankyou page */
+  .thanksmessage{ width: 1200px; font-size: 35px;}
+  .logo2{margin: auto;top: 10%;left: 38%;;}
+  .footerofthanks{ margin-top: 592px;}
+} 
+ /* this is the adjustment for the Ultrawide version!! */
+@media only screen and (min-width: 2000px){
+
+  /* this is the adjustment for main page on header */
+
+  .logo{ position:absolute; font-size: 60px; left: -330px; width: 1000px;}
+  #iconofheader{ width: 20px;}
+  .btn-toggle {width: 80px; height: 60px; font-size: 60px;}
+  .scissor{scale: 300%; color: white; margin-left: 40px;}
+  /*  the adjustment between the header the rest of page */
+  .container{height: 100px;}
+  .image{height: 1032px;}
+  img{height: 1048px;}
+  h1{font-size: 90px;}
+  .header-container{width: 840px;}
+  p{font-size: 40px;}
+  a.btn{margin-top: 150px; margin-left: -250px;}
+  .btn:link,.btn:visited{padding: 15px 45px; font-size: 48px;}
+  .active{width: 300px;}
+
+  /* this is adjustment of sidebar */
+  
+  .active_margin_right {margin-right: 300px;}
+  h4{font-size: 30px;}
+  .sidebar_item:hover{width: 275px;}
+  .sidebar_header {height: 80px;}
+  .sidebarfooter {height: 70px;width: 359px;margin-top: 842px;}
+
+  /*  the adjustment services part*/
+
+  .servicepart{height: 1150px; border: 10px rgb(253, 253, 253); border-style: dashed;}
+  .pictureofslide{height: 750px; width: 750px;}
+  .slideshow-container{margin-top: -690px; left: 440px;}
+  .text{font-size: 30px;top: 680px; left: 120px;}
+  .text-placeholder{margin-top: 230px; font-size: 29px;width: 1100px;left: 3%;}
+  .buttonofservices{font-size: 40px; margin-top: 750px;}
+  .prev,.next{height: 750px; width: 70px; margin-top: -850px;}
+  .next{margin-left: 197px;}
+
+   /*  the adjustment shop part*/
+   .cardpart{height: 1150px; }
+   .titleofshop{font-size: 120px;}
+   .placeholderofshop{height: 200px; width: 200px;margin-top: 60px;}
+   .next2{margin-left: 162px; font-size: 50px;}
+   .prev2{ font-size: 50px;margin-left: -510px;}
+   .subtitleofshop{margin-left: 56%;margin-top: 12%; width: 768px; font-size: 40px;}
+   .buttonofshop{font-size: 45px; left: 230px;margin-top: 521px;}
+
+   /* the card adjustments */
+   .card,.card2,.card3,.card4{width: 590px; height: 800px;border: 4px solid var(--main-color); box-shadow: 16px 20px var(--main-color); border-radius: 20px;}
+   .card-title{font-size: 35px; margin-top: 20px;}
+   .card-subtitle{font-size: 20px; margin-top: 20px;}
+   .card-divider{margin-top: 50px;}
+   .card-price{font-size: 40px;}
+   .card-price span{font-size: 40px;}
+   .card-footer{margin-top: 15%}
+   .card-btn{width: 110px; height: 60px;}
+   .card-btn svg{width: 50px; height:  50px;}
+
+     /*  the adjustment bookpart*/
+
+   .bookpart{height: 1150px;}
+   .titleofbook{width: 1120px;font-size: 80px;box-shadow: 12px 12px var(--main-color);margin-top: 15px;}
+   .button2{ font-size: 45px; margin-top: 160px;padding: 2rem 6rem;}
+   .contactdetails{font-size: 45px;width: 550px;}
+   .subtextofbook{width: 700px;}
+   .text1,.text2,.text3{font-size: 45px;}
+   #link1{left: -33%;}
+   .mainbuttonofbooking{ margin-top: 12%;}
+   .titleoffollow{font-size: 50px;margin-bottom: 20px; margin-left:-65px;}
+
+   /* this is the cards from book */
+
+   .cardofbook1{width: 175px; height: 175px; border-radius: 175px 8px 8px 8px;}
+   .cardofbook2 {width: 175px;height: 175px; border-radius: 8px 175px 8px 8px;}
+   .cardofbook3 {width: 175px;height: 175px; border-radius: 8px 8px 8px 175px;}
+   .cardofbook4 {width: 175px;height: 175px; border-radius: 8px 8px 175px 8px;}
+   .instagram,.facebook,.tiktok,.twitter{height: 55px;width: 55px;}
+
+   /* this is the adjustment of location section */
+   .locationpart{height: 1060px;}
+   .redmap{width: 800px;height: 750px;}
+   .titleoflocation{font-size: 70px; width: 804px;height: 130px;margin-top: 756px;}
+   .openingtimes{width: 620px;height: 875px;margin-left: 50px;}
+   .titleofopeningtime{font-size: 70px;}
+   .titleofdays{font-size: 33px;margin-top: 210px;margin-left: -327px;}   
+}
+@media only screen and (min-width: 2000px){
+   
+  /*this is adjustment of Redsshop.html  */
+
+  .slideshow-container3{display: none;} /* this will hide the slideshow of mobile version */
+  .bodyofRedsShop{height: 3450px;}
+  .titleofshoppage{font-size: 90px; margin-top: 130px;}
+  .cardofshop1, .cardofshop2, .cardofshop3, .cardofshop4{width: 450px;height: 645px; margin-top: 130px;}
+  .imgofshop{height: 175px; width: 175px;}
+  .card-footer1{margin-top: 40px;}
+ 
+  /* review section's adjustment */
+
+  .reviewsection{height: 1150px; margin-top: 1065px;}
+  .titleofreview { margin-top: -146px; width: 1235px; padding: 20px; font-size: 85px}
+  .textfromreviews1, .textfromreviews2, .textfromreviews3, .textfromreviews4 {font-size: 35px; }
+  .textfromreviews1{margin-left: 100px; width: 1000px;margin-top: 170px;}
+  .textfromreviews2{margin-top: 720px;margin-left: 182px; width: 900px;}
+  .textfromreviews3 {margin-top: 190px;margin-left: 1230px; width: 730px;}
+  .textfromreviews4{margin-top: 605px; margin-left: 1050px; width: 950px;}
+}
+@media only screen and (min-width: 2000px){
+  
+  /* this will be the adjustment of RedsServicespage.hmtl*/
+
+  .bodyofRedsService{height: 2300px;}
+  .Servicestext{ font-size: 60px;}
+  .btnofservicepage{left: 310px; font-size: 60px;}
+
+  /* the service containers */
+  .flashofcontainer1, .flashofcontainer2 {height: 600px;}
+  .flashofcontainer1{margin-bottom: 130px;}
+  .flashofcontainer2{margin-left: 170px;}
+  .ladiestext { font-size: 90px; top: 280px; left: 1200px;}
+  .textposition1{ font-size: 25px; margin-top: 10px;}
+  .gentlemantext{ font-size: 90px; left: 180px;}
+  .textposition2{font-size: 25px; margin-top: 30px;}
+}
+@media only screen and (min-width: 2000px){
+  /*  This is the adjustment of Redbookingpage*/
+.image-container img {width: 99.3vw;}
+.booktitle{font-size: 119px;width: 700px;}
+.booktitle2{ font-size: 60px; width: 940px;}
+
+/*  this is the adjustment of booking containers*/
+.backgroundofdetails1 {width: 580px; height: 700px;}
+.backgroundofdetails2 {width: 580px; height: 700px;}
+.titleofbookpage1 {width: 580px; padding: 30px; font-size: 45px; margin-top: 5%;}
+.titleofbookpage2 {width: 580px; padding: 30px; font-size: 45px; margin-top: 33%;}
+.form1,.form2{font-size: 35px;} 
+#fname,#lname,#numberinput,#email{width: 350px; height: 35px; font-size: 25px;}
+#date,#Services{width: 350px; height: 35px; font-size: 25px;}
+#time{width: 150px; height: 35px; font-size: 25px;}
+#Submit{width: 225px; height: 60px; font-size: 25px;}
+}

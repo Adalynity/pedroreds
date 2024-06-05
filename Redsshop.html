@@ -1,0 +1,419 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styleofRED.css">
+    <link href="https://fonts.googleapis.com/css2?family=Lato&display=swap" rel="stylesheet">
+    <link href="https://use.fontawesome.com/releases/v5.6.1/css/all.css" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/433b24fc29.js" crossorigin="anonymous"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+    <title>Shop</title>
+</head>
+<body class="bodyofRedsShop">
+    <header>
+        <nav class="container">
+            <i class="fa-solid fa-scissors fa-spin scissor"></i>
+            <h1 class="logo">
+              REDS HAIR STUDIO
+            </h1>
+            <div class="sidebar" id="locationofside">
+              <div class="sidebar_header">
+                <div class="sidebar_menu">
+                  <a href="/Red webiste.html" class="sidebar_item">
+                    <h4>Home</h4>
+                  </a>
+                  <!-- <a href="#" class="sidebar_item">
+                    <h4>Shop</h4>
+                  </a> -->
+                  <a href="RedsServicespage.html" class="sidebar_item">
+                    <h4>Services</h4>
+                  </a>
+                  <a href="/RedBookingpage.html" class="sidebar_item">
+                    <h4>Booking</h4>
+                  </a>
+                  <!-- <a href="#" class="sidebar_item">
+                    <h4>About us</h4>
+                  </a> -->
+                  <!-- this could be a update  for later -->
+                  <div class="sidebarfooter"></div>
+                </div>
+              </div>
+            </div>
+          
+            <div class="containerofsidebar">
+              <header class="header">
+                <button class="btn-toggle"><i class="fa-solid fa-bars"></i></button>
+               
+            <div class="cart" id="cart">
+              <h2>Shopping Cart</h2>
+                <ul id="cart-items"></ul>
+              <div class="total-container">
+
+            <p>Total: £<span id="total-price">0.00</span></p>
+        </div>
+    </div>
+
+    <button class="cart-toggle-btn" onclick="toggleCart()"><i class="fa-solid fa-cart-shopping"></i></button>
+
+         </nav>
+    </header>
+    <section class="topofshop">
+      <div class="titleofshoppage"> ~ Welcome to Red's Shop ~</div>
+        <div class="cardsofpageofshop">
+        <div class="cardofshop1"><br> 
+          <div class="card-img"><div class="img"></div><img src="/Shampoo1-removebg-preview.png" alt="placeholder" class="imgofshop"></div>
+          <br>
+          <div class="card-title">Shampoo</div>
+          <div class="card-subtitle">This shampoo is good for all hair types. It cleanses hair gently and leaves it soft and shiny. Helps reduce frizz and adds moisture. Suitable for daily use.</div>
+          <br>
+          <hr class="card-divider">
+          <div class="card-footer1"><br>
+              <div class="card-price"><span>£</span>1.50</div>
+              <button class="card-btn"  onclick="addToCart('Shampoo', 1.50)">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path d="m397.78 316h-205.13a15 15 0 0 1 -14.65-11.67l-34.54-150.48a15 15 0 0 1 14.62-18.36h274.27a15 15 0 0 1 14.65 18.36l-34.6 150.48a15 15 0 0 1 -14.62 11.67zm-193.19-30h181.25l27.67-120.48h-236.6z"></path><path d="m222 450a57.48 57.48 0 1 1 57.48-57.48 57.54 57.54 0 0 1 -57.48 57.48zm0-84.95a27.48 27.48 0 1 0 27.48 27.47 27.5 27.5 0 0 0 -27.48-27.47z"></path><path d="m368.42 450a57.48 57.48 0 1 1 57.48-57.48 57.54 57.54 0 0 1 -57.48 57.48zm0-84.95a27.48 27.48 0 1 0 27.48 27.47 27.5 27.5 0 0 0 -27.48-27.47z"></path><path d="m158.08 165.49a15 15 0 0 1 -14.23-10.26l-25.71-77.23h-47.44a15 15 0 1 1 0-30h58.3a15 15 0 0 1 14.23 10.26l29.13 87.49a15 15 0 0 1 -14.23 19.74z"></path></svg>
+              </button><br>
+          </div>
+      </div>
+      <div class="cardofshop2"><br> 
+        <div class="card-img"><div class="img"></div><img src="/Shampoo1-removebg-preview.png" alt="placeholder" class="imgofshop"></div>
+        <br>
+        <div class="card-title">Shampoo</div>
+        <div class="card-subtitle">This shampoo is good for all hair types. It cleanses hair gently and leaves it soft and shiny. Helps reduce frizz and adds moisture. Suitable for daily use.</div>
+        <br>
+        <hr class="card-divider">
+        <div class="card-footer1"><br>
+            <div class="card-price"><span>£</span>1.50</div>
+            <button class="card-btn"  onclick="addToCart('Shampoo', 1.50)">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path d="m397.78 316h-205.13a15 15 0 0 1 -14.65-11.67l-34.54-150.48a15 15 0 0 1 14.62-18.36h274.27a15 15 0 0 1 14.65 18.36l-34.6 150.48a15 15 0 0 1 -14.62 11.67zm-193.19-30h181.25l27.67-120.48h-236.6z"></path><path d="m222 450a57.48 57.48 0 1 1 57.48-57.48 57.54 57.54 0 0 1 -57.48 57.48zm0-84.95a27.48 27.48 0 1 0 27.48 27.47 27.5 27.5 0 0 0 -27.48-27.47z"></path><path d="m368.42 450a57.48 57.48 0 1 1 57.48-57.48 57.54 57.54 0 0 1 -57.48 57.48zm0-84.95a27.48 27.48 0 1 0 27.48 27.47 27.5 27.5 0 0 0 -27.48-27.47z"></path><path d="m158.08 165.49a15 15 0 0 1 -14.23-10.26l-25.71-77.23h-47.44a15 15 0 1 1 0-30h58.3a15 15 0 0 1 14.23 10.26l29.13 87.49a15 15 0 0 1 -14.23 19.74z"></path></svg>
+            </button><br>
+        </div>
+    </div>
+      <div class="cardofshop3"><br> 
+        <div class="card-img"><div class="img"></div><img src="/Shampoo1-removebg-preview.png" alt="placeholder" class="imgofshop"></div>
+          <br>
+          <div class="card-title">Shampoo</div>
+          <div class="card-subtitle">This shampoo is good for all hair types. It cleanses hair gently and leaves it soft and shiny. Helps reduce frizz and adds moisture. Suitable for daily use.</div>
+          <br>
+          <hr class="card-divider">
+          <div class="card-footer1"><br>
+              <div class="card-price"><span>£</span>1.50</div>
+              <button class="card-btn"  onclick="addToCart('Shampoo', 1.50)">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path d="m397.78 316h-205.13a15 15 0 0 1 -14.65-11.67l-34.54-150.48a15 15 0 0 1 14.62-18.36h274.27a15 15 0 0 1 14.65 18.36l-34.6 150.48a15 15 0 0 1 -14.62 11.67zm-193.19-30h181.25l27.67-120.48h-236.6z"></path><path d="m222 450a57.48 57.48 0 1 1 57.48-57.48 57.54 57.54 0 0 1 -57.48 57.48zm0-84.95a27.48 27.48 0 1 0 27.48 27.47 27.5 27.5 0 0 0 -27.48-27.47z"></path><path d="m368.42 450a57.48 57.48 0 1 1 57.48-57.48 57.54 57.54 0 0 1 -57.48 57.48zm0-84.95a27.48 27.48 0 1 0 27.48 27.47 27.5 27.5 0 0 0 -27.48-27.47z"></path><path d="m158.08 165.49a15 15 0 0 1 -14.23-10.26l-25.71-77.23h-47.44a15 15 0 1 1 0-30h58.3a15 15 0 0 1 14.23 10.26l29.13 87.49a15 15 0 0 1 -14.23 19.74z"></path></svg>
+              </button><br>
+        </div>
+    </div>      
+      <div class="cardofshop4"><br> 
+        <div class="card-img"><div class="img"></div><img src="/Shampoo1-removebg-preview.png" alt="placeholder" class="imgofshop"></div>
+          <br>
+          <div class="card-title">Shampoo</div>
+          <div class="card-subtitle">This shampoo is good for all hair types. It cleanses hair gently and leaves it soft and shiny. Helps reduce frizz and adds moisture. Suitable for daily use.</div>
+          <br>
+          <hr class="card-divider">
+          <div class="card-footer1"><br>
+              <div class="card-price"><span>£</span>1.50</div>
+              <button class="card-btn"  onclick="addToCart('Shampoo', 1.50)">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path d="m397.78 316h-205.13a15 15 0 0 1 -14.65-11.67l-34.54-150.48a15 15 0 0 1 14.62-18.36h274.27a15 15 0 0 1 14.65 18.36l-34.6 150.48a15 15 0 0 1 -14.62 11.67zm-193.19-30h181.25l27.67-120.48h-236.6z"></path><path d="m222 450a57.48 57.48 0 1 1 57.48-57.48 57.54 57.54 0 0 1 -57.48 57.48zm0-84.95a27.48 27.48 0 1 0 27.48 27.47 27.5 27.5 0 0 0 -27.48-27.47z"></path><path d="m368.42 450a57.48 57.48 0 1 1 57.48-57.48 57.54 57.54 0 0 1 -57.48 57.48zm0-84.95a27.48 27.48 0 1 0 27.48 27.47 27.5 27.5 0 0 0 -27.48-27.47z"></path><path d="m158.08 165.49a15 15 0 0 1 -14.23-10.26l-25.71-77.23h-47.44a15 15 0 1 1 0-30h58.3a15 15 0 0 1 14.23 10.26l29.13 87.49a15 15 0 0 1 -14.23 19.74z"></path></svg>
+              </button><br>
+        </div>
+    </div>
+  </div>
+  <div class="cardsofpageofshop">
+    <div class="cardofshop1"><br> 
+      <div class="card-img"><div class="img"></div><img src="/Conditioner1-removebg-preview.png" alt="placeholder"class="imgofshop"></div>
+      <br>
+      <div class="card-title">Conditioner</div>
+      <div class="card-subtitle">This conditioner is great for all hair types. It makes hair smooth and easy to manage. Adds moisture and reduces frizz. Leaves hair soft and shiny.</div>
+      <br>
+      <hr class="card-divider">
+      <div class="card-footer1"><br>
+          <div class="card-price"><span>£</span>2.50</div>
+          <button class="card-btn" onclick="addToCart('Conditioner', 2.50)">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path d="m397.78 316h-205.13a15 15 0 0 1 -14.65-11.67l-34.54-150.48a15 15 0 0 1 14.62-18.36h274.27a15 15 0 0 1 14.65 18.36l-34.6 150.48a15 15 0 0 1 -14.62 11.67zm-193.19-30h181.25l27.67-120.48h-236.6z"></path><path d="m222 450a57.48 57.48 0 1 1 57.48-57.48 57.54 57.54 0 0 1 -57.48 57.48zm0-84.95a27.48 27.48 0 1 0 27.48 27.47 27.5 27.5 0 0 0 -27.48-27.47z"></path><path d="m368.42 450a57.48 57.48 0 1 1 57.48-57.48 57.54 57.54 0 0 1 -57.48 57.48zm0-84.95a27.48 27.48 0 1 0 27.48 27.47 27.5 27.5 0 0 0 -27.48-27.47z"></path><path d="m158.08 165.49a15 15 0 0 1 -14.23-10.26l-25.71-77.23h-47.44a15 15 0 1 1 0-30h58.3a15 15 0 0 1 14.23 10.26l29.13 87.49a15 15 0 0 1 -14.23 19.74z"></path></svg>
+          </button><br>
+      </div>
+  </div>
+  <div class="cardofshop2"><br> 
+    <div class="card-img"><div class="img"></div><img src="/Conditioner1-removebg-preview.png" alt="placeholder"class="imgofshop"></div>
+      <br>
+      <div class="card-title">Conditioner</div>
+      <div class="card-subtitle">This conditioner is great for all hair types. It makes hair smooth and easy to manage. Adds moisture and reduces frizz. Leaves hair soft and shiny.</div>
+      <br>
+      <hr class="card-divider">
+      <div class="card-footer1"><br>
+          <div class="card-price"><span>£</span>2.50</div>
+          <button class="card-btn" onclick="addToCart('Conditioner', 2.50)">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path d="m397.78 316h-205.13a15 15 0 0 1 -14.65-11.67l-34.54-150.48a15 15 0 0 1 14.62-18.36h274.27a15 15 0 0 1 14.65 18.36l-34.6 150.48a15 15 0 0 1 -14.62 11.67zm-193.19-30h181.25l27.67-120.48h-236.6z"></path><path d="m222 450a57.48 57.48 0 1 1 57.48-57.48 57.54 57.54 0 0 1 -57.48 57.48zm0-84.95a27.48 27.48 0 1 0 27.48 27.47 27.5 27.5 0 0 0 -27.48-27.47z"></path><path d="m368.42 450a57.48 57.48 0 1 1 57.48-57.48 57.54 57.54 0 0 1 -57.48 57.48zm0-84.95a27.48 27.48 0 1 0 27.48 27.47 27.5 27.5 0 0 0 -27.48-27.47z"></path><path d="m158.08 165.49a15 15 0 0 1 -14.23-10.26l-25.71-77.23h-47.44a15 15 0 1 1 0-30h58.3a15 15 0 0 1 14.23 10.26l29.13 87.49a15 15 0 0 1 -14.23 19.74z"></path></svg>
+          </button><br>
+    </div>
+</div>
+  <div class="cardofshop3"><br> 
+    <div class="card-img"><div class="img"></div><img src="/Conditioner1-removebg-preview.png" alt="placeholder"class="imgofshop"></div>
+      <br>
+      <div class="card-title">Conditioner</div>
+      <div class="card-subtitle">This conditioner is great for all hair types. It makes hair smooth and easy to manage. Adds moisture and reduces frizz. Leaves hair soft and shiny.</div>
+      <br>
+      <hr class="card-divider">
+      <div class="card-footer1"><br>
+          <div class="card-price"><span>£</span>2.50</div>
+          <button class="card-btn" onclick="addToCart('Conditioner', 2.50)">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path d="m397.78 316h-205.13a15 15 0 0 1 -14.65-11.67l-34.54-150.48a15 15 0 0 1 14.62-18.36h274.27a15 15 0 0 1 14.65 18.36l-34.6 150.48a15 15 0 0 1 -14.62 11.67zm-193.19-30h181.25l27.67-120.48h-236.6z"></path><path d="m222 450a57.48 57.48 0 1 1 57.48-57.48 57.54 57.54 0 0 1 -57.48 57.48zm0-84.95a27.48 27.48 0 1 0 27.48 27.47 27.5 27.5 0 0 0 -27.48-27.47z"></path><path d="m368.42 450a57.48 57.48 0 1 1 57.48-57.48 57.54 57.54 0 0 1 -57.48 57.48zm0-84.95a27.48 27.48 0 1 0 27.48 27.47 27.5 27.5 0 0 0 -27.48-27.47z"></path><path d="m158.08 165.49a15 15 0 0 1 -14.23-10.26l-25.71-77.23h-47.44a15 15 0 1 1 0-30h58.3a15 15 0 0 1 14.23 10.26l29.13 87.49a15 15 0 0 1 -14.23 19.74z"></path></svg>
+          </button><br>
+    </div>
+</div>      
+  <div class="cardofshop4"><br> 
+    <div class="card-img"><div class="img"></div><img src="/Conditioner1-removebg-preview.png" alt="placeholder"class="imgofshop"></div>
+      <br>
+      <div class="card-title">Conditioner</div>
+      <div class="card-subtitle">This conditioner is great for all hair types. It makes hair smooth and easy to manage. Adds moisture and reduces frizz. Leaves hair soft and shiny.</div>
+      <br>
+      <hr class="card-divider">
+      <div class="card-footer1"><br>
+          <div class="card-price"><span>£</span>2.50</div>
+          <button class="card-btn" onclick="addToCart('Conditioner', 2.50)">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path d="m397.78 316h-205.13a15 15 0 0 1 -14.65-11.67l-34.54-150.48a15 15 0 0 1 14.62-18.36h274.27a15 15 0 0 1 14.65 18.36l-34.6 150.48a15 15 0 0 1 -14.62 11.67zm-193.19-30h181.25l27.67-120.48h-236.6z"></path><path d="m222 450a57.48 57.48 0 1 1 57.48-57.48 57.54 57.54 0 0 1 -57.48 57.48zm0-84.95a27.48 27.48 0 1 0 27.48 27.47 27.5 27.5 0 0 0 -27.48-27.47z"></path><path d="m368.42 450a57.48 57.48 0 1 1 57.48-57.48 57.54 57.54 0 0 1 -57.48 57.48zm0-84.95a27.48 27.48 0 1 0 27.48 27.47 27.5 27.5 0 0 0 -27.48-27.47z"></path><path d="m158.08 165.49a15 15 0 0 1 -14.23-10.26l-25.71-77.23h-47.44a15 15 0 1 1 0-30h58.3a15 15 0 0 1 14.23 10.26l29.13 87.49a15 15 0 0 1 -14.23 19.74z"></path></svg>
+          </button><br>
+    </div>
+</div>
+</div>
+<!-- this is slideshow for this page -->
+
+
+<div class="slideshow-container3">
+  <!--slides of pictures -->
+  <div class="mySlides2 fade">
+    <div class="card"><br> 
+      <div class="card-img"><div class="img"></div><img src="/Conditioner1-removebg-preview.png" alt="placeholder"class="imgofshop"></div>
+      <br>
+      <div class="card-title">Conditioner</div>
+      <div class="card-subtitle">This conditioner is great for all hair types. It makes hair smooth and easy to manage. Adds moisture and reduces frizz. Leaves hair soft and shiny.</div>
+      <br>
+      <hr class="card-divider">
+      <div class="card-footer1"><br>
+          <div class="card-price"><span>£</span>2.50</div>
+          <button class="card-btn" onclick="addToCart('Conditioner', 2.50)">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path d="m397.78 316h-205.13a15 15 0 0 1 -14.65-11.67l-34.54-150.48a15 15 0 0 1 14.62-18.36h274.27a15 15 0 0 1 14.65 18.36l-34.6 150.48a15 15 0 0 1 -14.62 11.67zm-193.19-30h181.25l27.67-120.48h-236.6z"></path><path d="m222 450a57.48 57.48 0 1 1 57.48-57.48 57.54 57.54 0 0 1 -57.48 57.48zm0-84.95a27.48 27.48 0 1 0 27.48 27.47 27.5 27.5 0 0 0 -27.48-27.47z"></path><path d="m368.42 450a57.48 57.48 0 1 1 57.48-57.48 57.54 57.54 0 0 1 -57.48 57.48zm0-84.95a27.48 27.48 0 1 0 27.48 27.47 27.5 27.5 0 0 0 -27.48-27.47z"></path><path d="m158.08 165.49a15 15 0 0 1 -14.23-10.26l-25.71-77.23h-47.44a15 15 0 1 1 0-30h58.3a15 15 0 0 1 14.23 10.26l29.13 87.49a15 15 0 0 1 -14.23 19.74z"></path></svg>
+          </button><br>
+      </div>
+  </div>
+</div>
+  <div class="mySlides2 fade">
+    <div class="card2"><br> 
+      <div class="card-img"><div class="img"></div><img src="/Shampoo1-removebg-preview.png" alt="placeholder" class="imgofshop"></div>
+          <br>
+          <div class="card-title">Shampoo</div>
+          <div class="card-subtitle">This shampoo is good for all hair types. It cleanses hair gently and leaves it soft and shiny. Helps reduce frizz and adds moisture. Suitable for daily use.</div>
+          <br>
+          <hr class="card-divider">
+          <div class="card-footer1"><br>
+              <div class="card-price"><span>£</span>1.50</div>
+              <button class="card-btn"  onclick="addToCart('Shampoo', 1.50)">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path d="m397.78 316h-205.13a15 15 0 0 1 -14.65-11.67l-34.54-150.48a15 15 0 0 1 14.62-18.36h274.27a15 15 0 0 1 14.65 18.36l-34.6 150.48a15 15 0 0 1 -14.62 11.67zm-193.19-30h181.25l27.67-120.48h-236.6z"></path><path d="m222 450a57.48 57.48 0 1 1 57.48-57.48 57.54 57.54 0 0 1 -57.48 57.48zm0-84.95a27.48 27.48 0 1 0 27.48 27.47 27.5 27.5 0 0 0 -27.48-27.47z"></path><path d="m368.42 450a57.48 57.48 0 1 1 57.48-57.48 57.54 57.54 0 0 1 -57.48 57.48zm0-84.95a27.48 27.48 0 1 0 27.48 27.47 27.5 27.5 0 0 0 -27.48-27.47z"></path><path d="m158.08 165.49a15 15 0 0 1 -14.23-10.26l-25.71-77.23h-47.44a15 15 0 1 1 0-30h58.3a15 15 0 0 1 14.23 10.26l29.13 87.49a15 15 0 0 1 -14.23 19.74z"></path></svg>
+              </button><br>
+      </div>
+  </div>
+</div>
+  <div class="mySlides2 fade">
+    <div class="card3"><br> 
+      <div class="card-img"><div class="img"></div><img src="/Conditioner1-removebg-preview.png" alt="placeholder"class="imgofshop"></div>
+      <br>
+      <div class="card-title">Conditioner</div>
+      <div class="card-subtitle">This conditioner is great for all hair types. It makes hair smooth and easy to manage. Adds moisture and reduces frizz. Leaves hair soft and shiny.</div>
+      <br>
+      <hr class="card-divider">
+      <div class="card-footer1"><br>
+          <div class="card-price"><span>£</span>2.50</div>
+          <button class="card-btn" onclick="addToCart('Conditioner', 2.50)">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path d="m397.78 316h-205.13a15 15 0 0 1 -14.65-11.67l-34.54-150.48a15 15 0 0 1 14.62-18.36h274.27a15 15 0 0 1 14.65 18.36l-34.6 150.48a15 15 0 0 1 -14.62 11.67zm-193.19-30h181.25l27.67-120.48h-236.6z"></path><path d="m222 450a57.48 57.48 0 1 1 57.48-57.48 57.54 57.54 0 0 1 -57.48 57.48zm0-84.95a27.48 27.48 0 1 0 27.48 27.47 27.5 27.5 0 0 0 -27.48-27.47z"></path><path d="m368.42 450a57.48 57.48 0 1 1 57.48-57.48 57.54 57.54 0 0 1 -57.48 57.48zm0-84.95a27.48 27.48 0 1 0 27.48 27.47 27.5 27.5 0 0 0 -27.48-27.47z"></path><path d="m158.08 165.49a15 15 0 0 1 -14.23-10.26l-25.71-77.23h-47.44a15 15 0 1 1 0-30h58.3a15 15 0 0 1 14.23 10.26l29.13 87.49a15 15 0 0 1 -14.23 19.74z"></path></svg>
+          </button><br>
+      </div>
+  </div>      
+</div>
+  <div class="mySlides2 fade">
+    <div class="card-img"><div class="img"></div><img src="/Shampoo1-removebg-preview.png" alt="placeholder" class="imgofshop"></div>
+          <br>
+          <div class="card-title">Shampoo</div>
+          <div class="card-subtitle">This shampoo is good for all hair types. It cleanses hair gently and leaves it soft and shiny. Helps reduce frizz and adds moisture. Suitable for daily use.</div>
+          <br>
+          <hr class="card-divider">
+          <div class="card-footer1"><br>
+              <div class="card-price"><span>£</span>1.50</div>
+              <button class="card-btn"  onclick="addToCart('Shampoo', 1.50)">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path d="m397.78 316h-205.13a15 15 0 0 1 -14.65-11.67l-34.54-150.48a15 15 0 0 1 14.62-18.36h274.27a15 15 0 0 1 14.65 18.36l-34.6 150.48a15 15 0 0 1 -14.62 11.67zm-193.19-30h181.25l27.67-120.48h-236.6z"></path><path d="m222 450a57.48 57.48 0 1 1 57.48-57.48 57.54 57.54 0 0 1 -57.48 57.48zm0-84.95a27.48 27.48 0 1 0 27.48 27.47 27.5 27.5 0 0 0 -27.48-27.47z"></path><path d="m368.42 450a57.48 57.48 0 1 1 57.48-57.48 57.54 57.54 0 0 1 -57.48 57.48zm0-84.95a27.48 27.48 0 1 0 27.48 27.47 27.5 27.5 0 0 0 -27.48-27.47z"></path><path d="m158.08 165.49a15 15 0 0 1 -14.23-10.26l-25.71-77.23h-47.44a15 15 0 1 1 0-30h58.3a15 15 0 0 1 14.23 10.26l29.13 87.49a15 15 0 0 1 -14.23 19.74z"></path></svg>
+              </button><br>
+      </div>
+  </div>
+</div>
+<div class="mySlides2 fade" >
+  <div class="card"><br> 
+    <div class="card-img"><div class="img"></div><img src="/Conditioner1-removebg-preview.png" alt="placeholder"class="imgofshop"></div>
+      <br>
+      <div class="card-title">Conditioner</div>
+      <div class="card-subtitle">This conditioner is great for all hair types. It makes hair smooth and easy to manage. Adds moisture and reduces frizz. Leaves hair soft and shiny.</div>
+      <br>
+      <hr class="card-divider">
+      <div class="card-footer1"><br>
+          <div class="card-price"><span>£</span>2.50</div>
+          <button class="card-btn" onclick="addToCart('Conditioner', 2.50)">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path d="m397.78 316h-205.13a15 15 0 0 1 -14.65-11.67l-34.54-150.48a15 15 0 0 1 14.62-18.36h274.27a15 15 0 0 1 14.65 18.36l-34.6 150.48a15 15 0 0 1 -14.62 11.67zm-193.19-30h181.25l27.67-120.48h-236.6z"></path><path d="m222 450a57.48 57.48 0 1 1 57.48-57.48 57.54 57.54 0 0 1 -57.48 57.48zm0-84.95a27.48 27.48 0 1 0 27.48 27.47 27.5 27.5 0 0 0 -27.48-27.47z"></path><path d="m368.42 450a57.48 57.48 0 1 1 57.48-57.48 57.54 57.54 0 0 1 -57.48 57.48zm0-84.95a27.48 27.48 0 1 0 27.48 27.47 27.5 27.5 0 0 0 -27.48-27.47z"></path><path d="m158.08 165.49a15 15 0 0 1 -14.23-10.26l-25.71-77.23h-47.44a15 15 0 1 1 0-30h58.3a15 15 0 0 1 14.23 10.26l29.13 87.49a15 15 0 0 1 -14.23 19.74z"></path></svg>
+          </button><br>
+    </div>
+</div>
+</div>
+<div class="mySlides2 fade" >
+  <div class="card-img"><div class="img"></div><img src="/Shampoo1-removebg-preview.png" alt="placeholder" class="imgofshop"></div>
+          <br>
+          <div class="card-title">Shampoo</div>
+          <div class="card-subtitle">This shampoo is good for all hair types. It cleanses hair gently and leaves it soft and shiny. Helps reduce frizz and adds moisture. Suitable for daily use.</div>
+          <br>
+          <hr class="card-divider">
+          <div class="card-footer1"><br>
+              <div class="card-price"><span>£</span>1.50</div>
+              <button class="card-btn"  onclick="addToCart('Shampoo', 1.50)">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path d="m397.78 316h-205.13a15 15 0 0 1 -14.65-11.67l-34.54-150.48a15 15 0 0 1 14.62-18.36h274.27a15 15 0 0 1 14.65 18.36l-34.6 150.48a15 15 0 0 1 -14.62 11.67zm-193.19-30h181.25l27.67-120.48h-236.6z"></path><path d="m222 450a57.48 57.48 0 1 1 57.48-57.48 57.54 57.54 0 0 1 -57.48 57.48zm0-84.95a27.48 27.48 0 1 0 27.48 27.47 27.5 27.5 0 0 0 -27.48-27.47z"></path><path d="m368.42 450a57.48 57.48 0 1 1 57.48-57.48 57.54 57.54 0 0 1 -57.48 57.48zm0-84.95a27.48 27.48 0 1 0 27.48 27.47 27.5 27.5 0 0 0 -27.48-27.47z"></path><path d="m158.08 165.49a15 15 0 0 1 -14.23-10.26l-25.71-77.23h-47.44a15 15 0 1 1 0-30h58.3a15 15 0 0 1 14.23 10.26l29.13 87.49a15 15 0 0 1 -14.23 19.74z"></path></svg>
+              </button><br>
+    </div>
+</div>
+</div>
+<div class="mySlides2 fade" >
+  <div class="card3"><br> 
+    <div class="card-img"><div class="img"></div><img src="/Conditioner1-removebg-preview.png" alt="placeholder"class="imgofshop"></div>
+    <br>
+    <div class="card-title">Conditioner</div>
+    <div class="card-subtitle">This conditioner is great for all hair types. It makes hair smooth and easy to manage. Adds moisture and reduces frizz. Leaves hair soft and shiny.</div>
+    <br>
+    <hr class="card-divider">
+    <div class="card-footer1"><br>
+        <div class="card-price"><span>£</span>2.50</div>
+        <button class="card-btn" onclick="addToCart('Conditioner', 2.50)">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path d="m397.78 316h-205.13a15 15 0 0 1 -14.65-11.67l-34.54-150.48a15 15 0 0 1 14.62-18.36h274.27a15 15 0 0 1 14.65 18.36l-34.6 150.48a15 15 0 0 1 -14.62 11.67zm-193.19-30h181.25l27.67-120.48h-236.6z"></path><path d="m222 450a57.48 57.48 0 1 1 57.48-57.48 57.54 57.54 0 0 1 -57.48 57.48zm0-84.95a27.48 27.48 0 1 0 27.48 27.47 27.5 27.5 0 0 0 -27.48-27.47z"></path><path d="m368.42 450a57.48 57.48 0 1 1 57.48-57.48 57.54 57.54 0 0 1 -57.48 57.48zm0-84.95a27.48 27.48 0 1 0 27.48 27.47 27.5 27.5 0 0 0 -27.48-27.47z"></path><path d="m158.08 165.49a15 15 0 0 1 -14.23-10.26l-25.71-77.23h-47.44a15 15 0 1 1 0-30h58.3a15 15 0 0 1 14.23 10.26l29.13 87.49a15 15 0 0 1 -14.23 19.74z"></path></svg>
+        </button><br>
+    </div>
+</div>
+</div>
+<div class="mySlides2 fade" >
+  <div class="card4"><br> 
+    <div class="card-img"><div class="img"></div><img src="/Shampoo1-removebg-preview.png" alt="placeholder" class="imgofshop"></div>
+          <br>
+          <div class="card-title">Shampoo</div>
+          <div class="card-subtitle">This shampoo is good for all hair types. It cleanses hair gently and leaves it soft and shiny. Helps reduce frizz and adds moisture. Suitable for daily use.</div>
+          <br>
+          <hr class="card-divider">
+          <div class="card-footer1"><br>
+              <div class="card-price"><span>£</span>1.50</div>
+              <button class="card-btn"  onclick="addToCart('Shampoo', 1.50)">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path d="m397.78 316h-205.13a15 15 0 0 1 -14.65-11.67l-34.54-150.48a15 15 0 0 1 14.62-18.36h274.27a15 15 0 0 1 14.65 18.36l-34.6 150.48a15 15 0 0 1 -14.62 11.67zm-193.19-30h181.25l27.67-120.48h-236.6z"></path><path d="m222 450a57.48 57.48 0 1 1 57.48-57.48 57.54 57.54 0 0 1 -57.48 57.48zm0-84.95a27.48 27.48 0 1 0 27.48 27.47 27.5 27.5 0 0 0 -27.48-27.47z"></path><path d="m368.42 450a57.48 57.48 0 1 1 57.48-57.48 57.54 57.54 0 0 1 -57.48 57.48zm0-84.95a27.48 27.48 0 1 0 27.48 27.47 27.5 27.5 0 0 0 -27.48-27.47z"></path><path d="m158.08 165.49a15 15 0 0 1 -14.23-10.26l-25.71-77.23h-47.44a15 15 0 1 1 0-30h58.3a15 15 0 0 1 14.23 10.26l29.13 87.49a15 15 0 0 1 -14.23 19.74z"></path></svg>
+              </button><br>
+    </div>
+</div>
+</div>
+    <a class="prev3" onclick="plusSlides2(-1)">❮</a>
+    <a class="next3" onclick="plusSlides2(1)">❯</a>
+ </div>
+ 
+
+    <div class="titleofreview">Reviews of our services and products</div>
+    </section> 
+    <section class="reviewsection">
+      <div id="movimentofreview">
+        <p class="textfromreviews1">I visit RED's Hair Studio website to buy some hair products <br>and was really happy with it. <br>
+        The site is easy to use, and I found what I needed quick. <br>
+        I order a shampoo and conditioner set, and it make my hair feel so soft. <br>
+        The shipping was fast too. I think I will order again from here. <br> ~Peter P.~</p>
+      <p class="textfromreviews2">Glad I bought from RED's Studio. <br>
+        Got dry shampoo and hair oil. Both are amazing. <br>
+        Delivery was quick. Very happy. <br>
+        ~ Charlie W.~</p>
+      <p class="textfromreviews3">RED's Hair Studio website is easy to use. <br>
+        Bought hair serum, made my hair smoother.
+        Fast delivery. Will shop again. <br>~Molly A.~</p>
+      <p class="textfromreviews4">
+        I tried RED's website for the first time last week. <br>
+        They have so many options for hair care! <br>
+        I got a hair mask and some styling gel. 
+        The mask made <br> my hair shiny and healthy looking. <br>
+        The gel held my style all day without being sticky.
+        The prices are also good. <br>
+        I recommend it to my friends already. <br> 
+        ~Alice B.~</p>
+      </div>
+    </section>   
+    <footer><p class="footertitle" style="text-align: center; padding-top: 60px;">&copy;Thomas Plamer website project made by Pedro Seles</p></footer>
+</body>
+</html>
+<script>
+  window.onload = load;
+
+function load() {
+  let btnToggle = document.querySelector(".btn-toggle");
+
+  btnToggle.addEventListener("click", (e) => {
+    let sidebar = document.querySelector(".sidebar");
+    let container = document.querySelector(".containerofsidebar");
+    sidebar.classList.toggle("active");
+    container.classList.toggle("active_margin_right");
+  });
+}
+let showIndex = 1;
+showSlides2(showIndex);
+
+function plusSlides2(n) {
+  showSlides2(showIndex += n);
+}
+
+function currentSlide2(n) {
+  showSlides2(showIndex = n);
+}
+function showSlides2(n) {
+  let i;
+  let slides = document.getElementsByClassName("mySlides2");
+  let dots = document.getElementsByClassName("dot2");
+  if (n > slides.length) {showIndex = 1}    
+  if (n < 1) {showIndex = slides.length}
+  for (i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none";  
+  }
+  for (i = 0; i < dots.length; i++) {
+    dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[showIndex-1].style.display = "block";  
+  dots[showIndex-1].className += " active";
+}
+let total = 0;
+
+function toggleCart() {
+    const cart = document.getElementById('cart');
+    if (cart.style.display === 'none' || cart.style.display === '') {
+        cart.style.display = 'flex';
+        document.querySelector('.cart-toggle-btn').textContent = 'X';
+    } else {
+        cart.style.display = 'none';
+        document.querySelector('.cart-toggle-btn').textContent = 'Show Cart' ;
+    }
+}
+
+function addToCart(name, price) {
+    const cartItems = document.getElementById('cart-items');
+    const totalPrice = document.getElementById('total-price');
+
+    const listItem = document.createElement('li');
+    listItem.textContent = `${name}: £${price}`;
+    
+    const removeButton = document.createElement('button');
+    removeButton.textContent = 'Remove';
+    removeButton.onclick = function() {
+        cartItems.removeChild(listItem);
+        total -= price;
+        totalPrice.textContent = total.toFixed(2);
+    };
+
+    listItem.appendChild(removeButton);
+    cartItems.appendChild(listItem);
+
+    total += price;
+    totalPrice.textContent = total.toFixed(2);
+}
+
+</script>

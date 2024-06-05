@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Sidebar Menu HTML5/CSS/JS</title>
+        <script src="https://kit.fontawesome.com/433b24fc29.js" crossorigin="anonymous"></script>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+      </head>
+      <style>
+        :root {
+  --padding: 0.5rem;
+  --margin-right: 0.5rem;
+  --smoky-black: #000000;
+  --pine-tree: #fff;
+  --blue: #d2042d;
+  --white: #dbdbdb;
+  --font-size: 0.8rem;
+}
+.containerofsidebar {
+  width: auto;
+  min-height: 100vh;
+  transition: margin-right 0.3s linear;
+}
+
+/* ////////////////////
+////////// Sidebar Menu
+//////////////////// */
+.sidebar {
+  width: 0;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  right: 0;
+  overflow: hidden;
+  z-index: 1;
+  background-color: var(--pine-tree);
+  transition: width 0.3s linear;
+ } 
+
+.sidebar_header {
+  width: 10px;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  color: var(--white);
+}
+
+.sidebar_menu {
+  width: 100%;
+  height: 100%;
+}
+
+.sidebar_item {
+  width: 100%;
+  padding: var(--padding);
+  font-size: var(--font-size);
+  background-color: var(--pine-tree);
+  color: #000;
+  display: block;
+  position: relative;
+  white-space: nowrap;
+
+}
+
+.sidebar_item::before {
+  content: "";
+  width: 70%;
+  height: 4px;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  background-color: var(--blue);
+  transform: scale(0);
+  transform-origin: right;
+  transition: all 0.3s linear;
+}
+
+.sidebar_item:hover::before {
+  transform: scale(1);
+}
+
+.sidebar_item:hover {
+  background-color: #fff;
+  color: var(--smoky-black);
+  transition: all 0.3s linear;
+}
+
+.sidebar_item:active {
+  transform: translateY(0.2rem);
+}
+
+.sidebar_icon {
+  width: 20%;
+  display: inline-block;
+  text-align: center;
+}
+
+.sidebar_item h4 {
+  width: 80%;
+  display: inline-block;
+}
+
+.active {
+  width: 150px;
+}
+.active_margin_right {
+  margin-right: 150px;
+}
+h4{
+  margin-left: 35%;
+}
+
+/* ////////////////////
+////////// HEADER
+//////////////////// */
+.header {
+  width: 100%;
+  height: 50px;
+  display: flex;
+  justify-content: end;
+  align-items: center;
+  background-color: var(--pine-tree);
+}
+
+/* Sidebar Toggle Button */
+.btn-toggle {
+  width: 50px;
+  height: 25px;
+  border: solid black 1px;
+  border-radius: 2px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: var(--padding);
+  background-color: var(--white);
+  color: var(--blue);
+  margin-right: var(--margin-right);
+  cursor: pointer;
+  transition: all 0.3s linear;
+}
+.btn-toggle:active {
+  box-shadow: 2px 2px 5px #e70808;
+  outline: none;
+  
+}
+
+/* ////////////////////
+////////// Main content
+//////////////////// */
+.contentofsidebar {
+  height: calc(100vh - 50px);
+  background-color: var(--white);
+  padding: var(--padding);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  
+}
+      </style>
+      <body>
+        <div class="sidebar">
+          <div class="sidebar_header">
+            <img src="logoofwebsite.png" alt="picture of the logo">
+          </div>
+      
+          <div class="sidebar_menu">
+            <a href="#" class="sidebar_item">
+              <h4>Home</h4>
+            </a>
+            <a href="#" class="sidebar_item">
+              <h4>Shop</h4>
+            </a>
+            <a href="#" class="sidebar_item">
+              <h4>Services</h4>
+            </a>
+            <a href="#" class="sidebar_item">
+              <h4>Contact</h4>
+            </a>
+            <a href="#" class="sidebar_item">
+              <h4>Booking</h4>
+            </a>
+            <a href="#" class="sidebar_item">
+              <h4>About us</h4>
+            </a>
+          </div>
+        </div>
+      
+        <div class="containerofsidebar">
+          <header class="header">
+            <button class="btn-toggle"><i class="fa-solid fa-bars"></i></button>
+          </header>
+      </body>
+      <script>
+        window.onload = load;
+
+function load() {
+  let btnToggle = document.querySelector(".btn-toggle");
+
+  btnToggle.addEventListener("click", (e) => {
+    let sidebar = document.querySelector(".sidebar");
+    let container = document.querySelector(".containerofsidebar");
+    sidebar.classList.toggle("active");
+    container.classList.toggle("active_margin_right");
+  });
+}
+      </script>
+</html>
