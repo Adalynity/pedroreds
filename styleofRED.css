@@ -940,15 +940,16 @@ img {
   }
   /* this is the ajustement for the mobile version!! */
   @media only screen and (max-width: 480px) {
-    .body{width: 100%;}
+    .body{width: 100%;  overflow-x: hidden;}
 
     /* this is navigation section */
     .container{height: 60px;} 
-    .logo{font-size: 18px;}
+    .logo{font-size: 18px;margin-left: -166px;}
     svg.bi.bi-scissors{height: 20px;width: 20px;}
-    .sidebar{right: 164px;}
+    .sidebar{right: 39px;}
     .active{width: 160px;}
     .sidebarfooter{display: none;}
+    
 
     /* this for header section */
 
@@ -1051,6 +1052,8 @@ img {
   padding: 10px;
   cursor: pointer;
   z-index: 1001;
+  text-align: center;
+  display: block;
 }
 
 .cart ul {
@@ -1238,9 +1241,10 @@ img {
   margin-top: 260px;
   margin-left: 920px;
 }
+.prev3,.next3{display: none;}
 @media only screen and (max-width: 1990px){
   .slideshow-container3{display: none;}
-  .prev3,.next3{display: none;}
+  .prev3,.next3{display: block;}
 }
 /* this is the ajustement for the mobile version!! */
 @media only screen and (max-width: 480px) {
@@ -1252,15 +1256,18 @@ img {
   .titleofshoppage{font-size: 34px;}
   .cardsofpageofshop{display: none;}
   .slideshow-container3{ position: absolute; display: block; margin-top: 20px;}
-  .prev3{margin-left: -528px;}
-  .next3{margin-left: -179px;}
+  .prev3{margin-left: -406px;}
+  .next3{margin-left: -50px;}
+  .prev3,.next3{margin-top: -110px;}
   #locationofside{right:144px;}
+  .cart{right: 144px; width: 160px;}
+  .cart h2 {margin-top: 47px;font-size: 16px;}
 
   
 
   /*this review section ajustments  */
 
-  .titleofreview{margin-top: -1200px; margin-left: 0%; font-size: 30px; width: 412px; color: white; background:none}
+  .titleofreview{margin-top: -795px; margin-left: 0%; font-size: 30px; width: 412px; color: white; background:none}
   .reviewsection{margin-right: -10px; height: 765px;}
   .textfromreviews1,.textfromreviews2, .textfromreviews3, .textfromreviews4{font-size: 12px; width: 400px; }
   .textfromreviews1 {margin-top: 175px; margin-left: 10px;}
@@ -1627,8 +1634,8 @@ h2{
   .main-section-of-Booking{ height: 1000px;}
   .titleofbookpage1{margin: auto; margin-top: -143px; width: 340px; font-size: 28px;}
   .titleofbookpage2{margin: auto; margin-top: 103%; width: 340px; font-size: 28px;} 
-  .backgroundofdetails1 {width: 340px; top: 115%; left: 10%;}
-  .backgroundofdetails2 {width: 340px; top: 173%; left: 10%;}
+  .backgroundofdetails1 {width: 340px; height: 380px;top: 115%; left: 10%;}
+  .backgroundofdetails2 {width: 340px; height: 380px; top: 173%; left: 10%;}
 }
 /* last page (Thank you page for the client that made appointment) */
 
